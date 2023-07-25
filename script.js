@@ -61,7 +61,7 @@ function playRound(playerSelection, computerSelection) {
     }
     else if (playerSelection === computerSelection)
     {
-        return "It's a tie!"
+        return "It's a tie!";
     }
     else 
     {
@@ -70,28 +70,51 @@ function playRound(playerSelection, computerSelection) {
     } 
 }
 
-function game() {
+function game(playerChoice) {
     // get the user input
     // loop 5 games and tally the results
     // print out the winner
-    let playerChoice = prompt("Rock, Paper, or Scissor?");
     let choice = getPlayerChoice(playerChoice);
     if (choice === 0)
     {
         return;
     }
 
-    for(let i = 0; i < 5; i++)
+    document.querySelector('.description').textContent = playRound(choice, getComputerChoice());
+
+    // console.log(playerWinTally + " " + compWinTally);
+    
+    let result = (playerWinTally > compWinTally) ? "You win!" : "You lose";
+
+    // updates the scoreboard
+    document.querySelector('.score1').textContent = playerWinTally;
+    document.querySelector('.score2').textContent = compWinTally;
+
+    // if either of the tally reaches 5 then return the result and reset the scoreboard
+    if (playerWinTally === 5)
     {
-        console.log(playRound(choice, getComputerChoice()));
-    }
-    console.log(playerWinTally + " " + compWinTally);
-    if (playerWinTally === compWinTally)
-    {
-        console.log("It's a tie");
+        playerWinTally = 0;
+        compWinTally = 0; 
+        document.querySelector('.result').textContent = 'You win!!!';
         return;
     }
-    (playerWinTally > compWinTally) ? console.log("You win!") : console.log("You lose");
+    if (compWinTally === 5)
+    {
+        playerWinTally = 0;
+        compWinTally = 0; 
+        document.querySelector('.result').textContent = 'You lose!!!';
+        return;
+    }
+    document.querySelector('.result').textContent = '';
 }
 
-game();
+function test() {
+    let choices = document.querySelectorAll('.choice');
+    choices.forEach(choice => {
+        choice.addEventListener('click', () => {
+            game(choice.textContent);
+        });
+    });
+}
+
+test();

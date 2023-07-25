@@ -1,0 +1,47 @@
+h1 {
+    text-align: center;
+}
+
+.container ul,
+.scoreboard ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 70px;
+}
+
+.container li {
+    border: 1px solid black;
+    padding: 8px;
+    margin: 8px 0px;
+}
+
+.choice:hover {
+    cursor: pointer;
+}
+
+.container {
+    /* border: 1px solid black; */
+    text-align: center;
+    font-size: 100px;
+    margin: 40px;
+}
+
+.scoreboard {
+    text-align: center;
+    font-size: 64px;
+}
+
+.result {
+    text-align: center;
+    font-size: 50px;
+}
+
+.description {
+    text-align: center;
+    font-size: 40px;
+}
