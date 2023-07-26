@@ -1,6 +1,7 @@
 console.log("Shania Claire");
 let playerWinTally = 0;
 let compWinTally = 0;
+let toggle = true;
 
 function convertToWord(choice){
     switch (choice)
@@ -33,17 +34,11 @@ function getPlayerChoice(playerChoice) {
     {
         return 2;
     }
-    else if (playerChoice.toLowerCase() === 'scissors')
+    else
     {
         return 3;
     }
-    else 
-    {
-        console.log('Enter a valid value');
-        return 0; 
-    }
 }
-
 
 function playRound(playerSelection, computerSelection) {
     // compare values
@@ -70,26 +65,7 @@ function playRound(playerSelection, computerSelection) {
     } 
 }
 
-function game(playerChoice) {
-    // get the user input
-    // loop 5 games and tally the results
-    // print out the winner
-    let choice = getPlayerChoice(playerChoice);
-    if (choice === 0)
-    {
-        return;
-    }
-
-    document.querySelector('.description').textContent = playRound(choice, getComputerChoice());
-
-    // console.log(playerWinTally + " " + compWinTally);
-    
-    let result = (playerWinTally > compWinTally) ? "You win!" : "You lose";
-
-    // updates the scoreboard
-    document.querySelector('.score1').textContent = playerWinTally;
-    document.querySelector('.score2').textContent = compWinTally;
-
+function updateResult() {
     // if either of the tally reaches 5 then return the result and reset the scoreboard
     if (playerWinTally === 5)
     {
@@ -106,13 +82,38 @@ function game(playerChoice) {
         return;
     }
     document.querySelector('.result').textContent = '';
+    return;
+}
+
+function updateScore() {
+    document.querySelector('.score1').textContent = playerWinTally;
+    document.querySelector('.score2').textContent = compWinTally;
+    if(playerWinTally === 5 || compWinTally === 5)
+    {
+        toggle = false;
+    }
+}
+
+function updateDescription(description) {
+    document.querySelector('.description').textContent = description;
+}
+
+function game(playerChoice) {
+    let choice = getPlayerChoice(playerChoice);
+    let description = playRound(choice, getComputerChoice());
+    updateDescription(description);
+    updateScore();
+    updateResult();
 }
 
 function test() {
     let choices = document.querySelectorAll('.choice');
     choices.forEach(choice => {
         choice.addEventListener('click', () => {
-            game(choice.textContent);
+            if (toggle) {
+                console.log(toggle);
+                game(choice.textContent);
+            }
         });
     });
 }
