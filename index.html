@@ -9,37 +9,45 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <h1>Rock Paper Scissors</h1>
+    <header>
+        <nav class="navbar" style="background-color: #566570;">
+            <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">Rock Paper Scissors</span>
+            </div>
+            </nav>
+        </nav>
+    </header>
+
     <div class="container">
-        Choose your weapon
-        <ul>
-            <li class="choice">Rock</li>
-            <li class="choice">Paper</li>
-            <li class="choice">Scissors</li>
-        </ul>
+        <div class="top-UI">
+            Choose your weapon
+            <div class="choices">
+                <button type="button" class="choice btn btn-secondary">Rock</button>
+                <button type="button" class="choice btn btn-secondary">Paper</button>
+                <button type="button" class="choice btn btn-secondary">Scissors</button>
+            </div>  
+        </div>
+        <div class="bottom-UI">
+            Scoreboard
+            <ul class="scoreboard">
+                <li>
+                    You
+                    <div class="score1">0</div>
+                </li>
+                <li>
+                    Comp
+                    <div class="score2">0</div>
+                </li>
+            </ul>
+        </div>
+        <div class="description"></div>
+        <div class="result"></div>
+        <button type="button" class="btn btn-secondary reset">Reset Game</button>
     </div>
-    <div class="scoreboard">
-        Scoreboard
-        <ul>
-            <li>
-                You
-                <ul>
-                    <li class="score1">0</li>
-                </ul>
-            </li>
-            <li>
-                Comp
-                <ul>
-                    <li class="score2">0</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-    <div class="description"></div>
-    <div class="result"></div>
+    
+    <footer>
+    </footer>
     <script src="script.js"></script>
-    <div class="footer">
-        <button type="button" class="btn btn-secondary">Reset Game</button>
-    </div>
 </body>
 </html>

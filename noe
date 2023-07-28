@@ -1,0 +1,29 @@
+[33mcommit 37c2ffe8f0cb2702a27d8d351439604c03c51608[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mresetButton[m[33m)[m
+Author: Shane <71f4ldre@duck.com>
+Date:   Fri Jul 28 18:35:18 2023 +0800
+
+    made the reset button functional
+
+[33mcommit 88160390755877a0c4debeb7a2dfda245b9d4718[m
+Author: Shane <71f4ldre@duck.com>
+Date:   Fri Jul 28 18:01:18 2023 +0800
+
+    added reset button after every win or lose
+
+[33mcommit 2ca59ae4eb6adc3a43ee43a4d71d156e9421b464[m
+Author: Shane <71f4ldre@duck.com>
+Date:   Thu Jul 27 07:19:47 2023 +0800
+
+    Organized the functions for readability and added toggle to stop game when won
+
+[33mcommit 5ff2a2cdd74dd1bdf1f1d23cc34743f4f42ab5a5[m
+Author: Shane <71f4ldre@duck.com>
+Date:   Tue Jul 25 19:02:01 2023 +0800
+
+     my first branch commit and added advanced features to rock paper scissors
+
+[33mcommit 766f587887a062c6654970dd61cafb7f4d358764[m
+Author: Shane <71f4ldre@duck.com>
+Date:   Tue Jul 18 18:18:48 2023 +0800
+
+    My first java script commit

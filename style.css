@@ -1,55 +1,38 @@
-h1 {
-    text-align: center;
-}
-
-.container ul,
-.scoreboard ul {
-    list-style: none;
-    padding: 0px;
-    margin: 0px;
-    /* border: 1px solid black; */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 70px;
-}
-
-.container li {
-    border: 1px solid black;
-    padding: 8px;
-    margin: 8px 0px;
-}
-
-.choice:hover {
-    cursor: pointer;
-}
-
 .container {
-    /* border: 1px solid black; */
+    border: 1px solid black;
+    padding: 5px;
     text-align: center;
-    font-size: 100px;
-    margin: 40px;
+}
+
+.top-UI {
+    border: 1px solid red;
+    padding: 8px;
+    margin: 5px 0px;
+}
+
+.bottom-UI {
+    border: 1px solid red;
+    padding: 8px;
+    margin: 5px 0px;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
 }
 
 .scoreboard {
-    text-align: center;
-    font-size: 64px;
+    border: 0px;
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
 }
 
+.description,
 .result {
-    text-align: center;
-    font-size: 50px;
-}
-
-.description {
-    text-align: center;
-    font-size: 40px;
-}
-
-.btn {
-    font-size: 35px;
-}
-
-.footer {
+    /* border: 1px solid red; */
+    height: 3rem;
     text-align: center;
 }

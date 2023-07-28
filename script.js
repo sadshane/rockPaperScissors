@@ -90,7 +90,7 @@ function resetGame() {
     // resetButton.setAttribute('class', 'btn btn-secondary');
     // footer.appendChild(resetButton);
 
-    let resetButton = document.querySelector('.btn');
+    let resetButton = document.querySelector('.reset');
     resetButton.addEventListener('click', () => {
         playerWinTally = 0;
         compWinTally = 0;
