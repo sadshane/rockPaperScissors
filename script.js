@@ -69,20 +69,29 @@ function updateResult() {
     // if either of the tally reaches 5 then return the result and reset the scoreboard
     if (playerWinTally === 5)
     {
-        playerWinTally = 0;
-        compWinTally = 0; 
         document.querySelector('.result').textContent = 'You win!!!';
+        resetGame();
         return;
     }
     if (compWinTally === 5)
     {
-        playerWinTally = 0;
-        compWinTally = 0; 
         document.querySelector('.result').textContent = 'You lose!!!';
+        resetGame();
         return;
     }
     document.querySelector('.result').textContent = '';
     return;
+}
+
+function resetGame() {
+    playerWinTally = 0;
+    compWinTally = 0;
+    let resetButton = document.createElement('button');
+    resetButton.textContent = 'Reset Game';
+    let footer = document.querySelector('.footer');
+    resetButton.setAttribute('type', 'button');
+    resetButton.setAttribute('class', 'btn btn-secondary');
+    footer.appendChild(resetButton);
 }
 
 function updateScore() {
