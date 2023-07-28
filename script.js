@@ -79,19 +79,27 @@ function updateResult() {
         resetGame();
         return;
     }
-    document.querySelector('.result').textContent = '';
     return;
 }
 
 function resetGame() {
-    playerWinTally = 0;
-    compWinTally = 0;
-    let resetButton = document.createElement('button');
-    resetButton.textContent = 'Reset Game';
-    let footer = document.querySelector('.footer');
-    resetButton.setAttribute('type', 'button');
-    resetButton.setAttribute('class', 'btn btn-secondary');
-    footer.appendChild(resetButton);
+    // let resetButton = document.createElement('button');
+    // resetButton.textContent = 'Reset Game';
+    // let footer = document.querySelector('.footer');
+    // resetButton.setAttribute('type', 'button');
+    // resetButton.setAttribute('class', 'btn btn-secondary');
+    // footer.appendChild(resetButton);
+
+    let resetButton = document.querySelector('.btn');
+    resetButton.addEventListener('click', () => {
+        playerWinTally = 0;
+        compWinTally = 0;
+        document.querySelector('.score1').textContent = '0';
+        document.querySelector('.score2').textContent = '0';
+        document.querySelector('.description').textContent = '';
+        document.querySelector('.result').textContent = '';
+        toggle = true;
+    });
 }
 
 function updateScore() {
@@ -120,7 +128,6 @@ function test() {
     choices.forEach(choice => {
         choice.addEventListener('click', () => {
             if (toggle) {
-                console.log(toggle);
                 game(choice.textContent);
             }
         });
