@@ -1,19 +1,32 @@
+* {
+    /* border: 1px solid red; */
+}
+body {
+    font-family: 'Indie Flower', cursive;
+    font-size: 5rem;
+    background-color: #F2EE9D;
+}
+
 .container {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 5px;
     text-align: center;
 }
 
 .top-UI {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 8px;
     margin: 5px 0px;
+    background-color: #7A9D54;
+    border-radius: 8px;
 }
 
 .bottom-UI {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 8px;
     margin: 5px 0px;
+    background-color: #557A46;
+    border-radius: 8px;
 }
 
 .choices {
@@ -33,6 +46,19 @@
 .description,
 .result {
     /* border: 1px solid red; */
-    height: 3rem;
+    height: auto;
     text-align: center;
+    margin: 10px 0px;
+    background-color: #8C3333;
+    border-radius: 8px;
+}
+
+.choice {
+    width: 10rem;
+}
+
+.score1, 
+.score2 {
+    background-color: #7A9D54;
+    border-radius: 8px;
 }
